@@ -8,7 +8,7 @@ from PIL import Image
 
 
 # loading the saved model
-loaded_model = pickle.load(open(r'C:\Users\user\Documents\GOMYCODE\New\ML\7.Streamlit\trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 # creating a function for Prediction
@@ -35,7 +35,7 @@ def diabetes_prediction(input_data):
 def main():
 
     # display image
-    img = Image.open(r"C:\Users\user\Documents\GOMYCODE\New\ML\7.Streamlit\diabetes.png")
+    img = Image.open("diabetes.png")
     new_image = img.resize((700, 200))
     st.image(new_image)
     # let's display
